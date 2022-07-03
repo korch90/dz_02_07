@@ -6,9 +6,22 @@ let password = document.getElementById("password")
 let button = document.getElementById("button")
 let starwars=document.getElementById("starwars")
 let wrapper=document.getElementById("wrapper")
+let inp =[...document.getElementsByClassName("inp")]
 
 button.addEventListener("click", buttonForm)
 
+
+
+wrapper.addEventListener("keypress", firstNameFunc)
+wrapper.addEventListener("keyup", firstNameFunc2)
+
+
+function firstNameFunc(el){
+el.target.style="border:2px solid blue"
+}
+function firstNameFunc2(el){
+    el.target.style="border:0px solid blue"
+}
 
 //object for flags
 let flags = {
@@ -124,6 +137,11 @@ function telF() {
 
 
 
+// var event_list = ["click", "scroll"]; 
+// event_list.forEach(function(event) {
+// 	document.querySelector(".element").addEventListener(event, function() { 
+// 	});
+// });
 
 
 // клік не по елементу
